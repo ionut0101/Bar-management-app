@@ -11,11 +11,11 @@ namespace ConsoleBar
     {
         static void Main(string[] args)
         {
-            Bar.IProduct product = new Bar.Product(id : "2" , name: "test fdsfsd", price: "2.5 lei dada", category: "Suc", description: "beem si de asta" , stockQuantity : "15");
+            Bar.IProduct product = new Bar.Product(name: "Coca-Cola", price: "7.5 lei doar acum", category: "Beutura neagra", description: "yoyoyo" , stockQuantity : "100");
 
             DB.IProductDB db = new DB.ProductDB("test.txt");
             
-            //db.Update(product);
+            db.Create(product);
             /*
             IProduct newProduct = new Product();
 
@@ -29,7 +29,7 @@ namespace ConsoleBar
             db.Create(newProduct);
             */
 
-            db.DeleteById("1");
+            //db.DeleteById("1");
             
             //DB.IProductDB db = new DB.ProductDB("test.txt");
 
