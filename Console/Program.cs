@@ -26,7 +26,7 @@ namespace ConsoleBar
             */
 
 
-            List<IProduct> list = db.LookupByName( "Remy Mar" );
+            List<IProduct> list = db.LookupByName( "Rem" );
 
             foreach (IProduct p in list)
             {
