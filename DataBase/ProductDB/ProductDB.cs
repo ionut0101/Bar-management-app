@@ -97,6 +97,11 @@ namespace DB
             IProduct product;
             productName = productName.ToLower();
 
+            if( productName.Length == 0 )
+            {
+                return list;
+            }
+
             StreamReader streamReader = new StreamReader( dataBaseName );
 
             while((dataBaseRow = streamReader.ReadLine()) != null)
