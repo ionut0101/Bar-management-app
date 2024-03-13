@@ -4,10 +4,11 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using Type;
 
 namespace Bar
 {
-    public class Product : IProduct
+    public class Product : Analyzer , IProduct
     {
         public string Id { get; set; }
         public string Name { get; set; }
@@ -40,31 +41,6 @@ namespace Bar
         public string Stringify()
         {
             return $"Id :\t\t{Id}\nName :\t\t{Name}\nPrice :\t\t{Price}\nDescription :\t{Description}\nCategory :\t{Category}\nStock :\t\t{StockQuantity}\n";
-        }
-
-        public string GetValue(string propertyName)
-        {
-            var property = GetType().GetProperty(propertyName);
-
-            if( property == null )
-            {
-                throw new Exception($"Property '{propertyName}' does not exist in type {GetType().Name}.");
-            }
-
-            object result = property.GetValue(this);
-            return result.ToString();
-        }
-
-        public void UpdateValue(string propertyName , string payload)
-        {
-            PropertyInfo property = GetType().GetProperty(propertyName);
-
-            if( property == null)
-            {
-                throw new Exception($"Property '{propertyName}' does not exist in type {GetType().Name}.");
-            }
-
-            property.SetValue(this , payload);
         }
 
         public void Clear()

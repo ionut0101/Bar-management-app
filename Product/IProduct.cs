@@ -14,11 +14,9 @@ namespace Bar
         string Description { get; set; }
         string Category { get; set; }
         string StockQuantity { get; set; }
-
         string Stringify();
         string GetValue(string propertyName);
-        void UpdateValue(string propertyName , string payload);
-
+        void UpdateValue(string propertyName, string payload);
         void Clear();
     }
 }
