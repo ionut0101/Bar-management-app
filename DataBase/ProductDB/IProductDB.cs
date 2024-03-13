@@ -13,6 +13,7 @@ namespace DB
         List<IProduct> GetAll();
         void DeleteById( string id );
         bool Update(IProduct product);
+        List<IProduct> LookupByName( string productName );
         string GetLastInsertedId();
         string ToStringFormat(IProduct product);
         IProduct ToProductFormat(string payload);

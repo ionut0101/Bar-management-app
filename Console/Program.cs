@@ -11,29 +11,22 @@ namespace ConsoleBar
     {
         static void Main(string[] args)
         {
-            Bar.IProduct product = new Bar.Product(name: "Coca-Cola", price: "7.5 lei doar acum", category: "Beutura neagra", description: "yoyoyo" , stockQuantity : "100");
+            /*
+            IProduct product = new Product(name: "LOUIS XIII de Remy Martin", price: "590 LEI", category: "COGNACS", description: "top 1" , stockQuantity : "10");
+            IProduct secondProduct = new Product(name: "Cuba libre", price: "29 LEI", category: "CLASSIC", description: "top 2", stockQuantity: "22");
+            IProduct thirdProduct = new Product(name: "Remy Martin XO", price: "115 LEI", category: "COGNACS", description: "top 3", stockQuantity: "13");
+            */
 
             DB.IProductDB db = new DB.ProductDB("test.txt");
             
-            db.Create(product);
             /*
-            IProduct newProduct = new Product();
-
-            newProduct.Name = "Produs nou";
-            newProduct.Price = "10 lei baiatu";
-            newProduct.Category = "Beutura";
-            newProduct.Description = "Bei maine si mori azi";
-            newProduct.StockQuantity = "20";
-            
-
-            db.Create(newProduct);
+            db.Create(product);
+            db.Create(secondProduct);
+            db.Create(thirdProduct);
             */
 
-            //db.DeleteById("1");
-            
-            //DB.IProductDB db = new DB.ProductDB("test.txt");
 
-            List<Bar.IProduct> list = db.GetAll();
+            List<IProduct> list = db.LookupByName( "Remy Mar" );
 
             foreach (IProduct p in list)
             {

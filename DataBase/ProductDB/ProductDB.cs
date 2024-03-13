@@ -90,6 +90,29 @@ namespace DB
             return products;
         }
 
+        public List<IProduct> LookupByName( string productName )
+        {
+            List<IProduct> list = new List<IProduct>();
+            string dataBaseRow;
+            IProduct product;
+            productName = productName.ToLower();
+
+            StreamReader streamReader = new StreamReader( dataBaseName );
+
+            while((dataBaseRow = streamReader.ReadLine()) != null)
+            {
+                product = ToProductFormat( dataBaseRow );
+                if( product.GetValue( "Name" ).ToLower().Contains( productName ) )
+                {
+                    list.Add( product );
+                }
+            }
+
+            streamReader.Close();
+
+            return list;
+        }
+
         public string GetLastInsertedId()
         {
             string lastId = "0";
