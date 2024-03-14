@@ -33,10 +33,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Product">
-      <HintPath>..\Product\bin\Debug\Product.dll</HintPath>
+    <Reference Include="FieldGuard, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FieldGuard\bin\Debug\FieldGuard.dll</HintPath>
     </Reference>
-    <Reference Include="ProductDB">
+    <Reference Include="Product, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FieldGuard\bin\Debug\Product.dll</HintPath>
+    </Reference>
+    <Reference Include="ProductDB, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\DataBase\ProductDB\bin\Debug\ProductDB.dll</HintPath>
     </Reference>
     <Reference Include="System" />
@@ -47,8 +53,9 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
-    <Reference Include="TypeAnalyzer">
-      <HintPath>..\TypeAnalyzer\bin\Debug\TypeAnalyzer.dll</HintPath>
+    <Reference Include="TypeAnalyzer, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FieldGuard\bin\Debug\TypeAnalyzer.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
