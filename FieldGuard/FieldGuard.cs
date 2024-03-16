@@ -6,10 +6,10 @@ namespace InputGuard
 {
     public class ProductIntegrityCheck
     {
-        const int nameMinLength = 1;
-        const int nameMaxLength = 32;
-        const int descriptionMinLength = 0;
-        const int descriptionMaxLength = 50;
+        private const int nameMinLength = 1;
+        private const int nameMaxLength = 32;
+        private const int descriptionMinLength = 0;
+        private const int descriptionMaxLength = 50;
 
         public static Dictionary<string, string> Validate(IProduct product)
         {
