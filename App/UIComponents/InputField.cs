@@ -49,7 +49,6 @@ namespace App.UIComponents
             }
         }
 
-        [DefaultValue('\0')]
         public char FieldPassword
         {
             get

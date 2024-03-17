@@ -1,4 +1,5 @@
-﻿using System;
+﻿using App.UIComponents;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,11 +20,6 @@ namespace App
         public PrimaryForm()
         {
             InitializeComponent();
-        }
-
-        private void PrimaryForm_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void PrimaryForm_MouseDown(object sender, MouseEventArgs e)
@@ -51,36 +47,34 @@ namespace App
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void closeButton_Click(object sender, EventArgs e)
         {
-            
-            string userName = inputField1.Text;
-            string password = inputField2.Text;
-
-            MessageBox.Show( $"Username :\t{userName}\nPassword :\t{password}" );
-            
+            Application.Exit();
         }
-
-        private void controlButton2_Click(object sender, EventArgs e)
+        private void minimizeButton_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
         }
 
-        private void controlButton1_Click(object sender, EventArgs e)
+        private void passwordCheckbox_CheckedChanged(object sender, EventArgs e)
         {
-            Application.Exit();
-        }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-            if( passwordCheckbox.Checked )
+            if (passwordCheckbox.Checked)
             {
-                inputField2.FieldPassword = '\0';
-            } 
+                passwordField.FieldPassword = '\0';
+            }
             else
             {
-                inputField2.FieldPassword = '*';
+                passwordField.FieldPassword = '*';
             }
         }
+
+        private void authButton_Click(object sender, EventArgs e)
+        {
+            string userName = nameField.Text;
+            string password = passwordField.Text;
+
+            MessageBox.Show($"Username :\t{userName}\nPassword :\t{password}");
+        }
+
     }
 }

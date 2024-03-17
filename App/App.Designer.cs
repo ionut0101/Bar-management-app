@@ -28,24 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.authButton = new System.Windows.Forms.Button();
             this.passwordCheckbox = new System.Windows.Forms.CheckBox();
-            this.inputField2 = new App.UIComponents.InputField();
-            this.inputField1 = new App.UIComponents.InputField();
+            this.passwordField = new App.UIComponents.InputField();
+            this.nameField = new App.UIComponents.InputField();
             this.controlButton2 = new App.UIComponents.ControlButton();
             this.controlButton1 = new App.UIComponents.ControlButton();
             this.SuspendLayout();
             // 
-            // button1
+            // authButton
             // 
-            this.button1.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(30, 300);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(340, 57);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Autentificare";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.authButton.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.authButton.Location = new System.Drawing.Point(30, 300);
+            this.authButton.Margin = new System.Windows.Forms.Padding(0);
+            this.authButton.Name = "authButton";
+            this.authButton.Size = new System.Drawing.Size(340, 57);
+            this.authButton.TabIndex = 2;
+            this.authButton.Text = "Autentificare";
+            this.authButton.UseVisualStyleBackColor = true;
+            this.authButton.Click += new System.EventHandler(this.authButton_Click);
             // 
             // passwordCheckbox
             // 
@@ -57,46 +58,47 @@
             this.passwordCheckbox.TabIndex = 7;
             this.passwordCheckbox.Text = "Arata parola";
             this.passwordCheckbox.UseVisualStyleBackColor = true;
-            this.passwordCheckbox.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.passwordCheckbox.CheckedChanged += new System.EventHandler(this.passwordCheckbox_CheckedChanged);
             // 
-            // inputField2
+            // passwordField
             // 
-            this.inputField2.BackColor = System.Drawing.Color.White;
-            this.inputField2.FieldPassword = '*';
-            this.inputField2.FieldPlaceholder = "Parola ta...";
-            this.inputField2.FieldPlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(85)))), ((int)(((byte)(105)))));
-            this.inputField2.FieldText = null;
-            this.inputField2.FieldTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            this.inputField2.FieldTitle = "Parola";
-            this.inputField2.FieldTitleColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(116)))), ((int)(((byte)(139)))));
-            this.inputField2.FieldWidth = 340;
-            this.inputField2.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inputField2.Location = new System.Drawing.Point(30, 150);
-            this.inputField2.Margin = new System.Windows.Forms.Padding(0);
-            this.inputField2.Name = "inputField2";
-            this.inputField2.Padding = new System.Windows.Forms.Padding(4);
-            this.inputField2.Size = new System.Drawing.Size(340, 52);
-            this.inputField2.TabIndex = 6;
-            this.inputField2.TabStop = false;
+            this.passwordField.BackColor = System.Drawing.Color.White;
+            this.passwordField.FieldPassword = '*';
+            this.passwordField.FieldPlaceholder = "Parola ta...";
+            this.passwordField.FieldPlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(85)))), ((int)(((byte)(105)))));
+            this.passwordField.FieldText = null;
+            this.passwordField.FieldTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.passwordField.FieldTitle = "Parola";
+            this.passwordField.FieldTitleColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(116)))), ((int)(((byte)(139)))));
+            this.passwordField.FieldWidth = 340;
+            this.passwordField.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passwordField.Location = new System.Drawing.Point(30, 150);
+            this.passwordField.Margin = new System.Windows.Forms.Padding(0);
+            this.passwordField.Name = "passwordField";
+            this.passwordField.Padding = new System.Windows.Forms.Padding(4);
+            this.passwordField.Size = new System.Drawing.Size(340, 52);
+            this.passwordField.TabIndex = 6;
+            this.passwordField.TabStop = false;
             // 
-            // inputField1
+            // nameField
             // 
-            this.inputField1.BackColor = System.Drawing.Color.White;
-            this.inputField1.FieldPlaceholder = "Numele tau...";
-            this.inputField1.FieldPlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(85)))), ((int)(((byte)(105)))));
-            this.inputField1.FieldText = "";
-            this.inputField1.FieldTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            this.inputField1.FieldTitle = "Nume";
-            this.inputField1.FieldTitleColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(116)))), ((int)(((byte)(139)))));
-            this.inputField1.FieldWidth = 340;
-            this.inputField1.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inputField1.Location = new System.Drawing.Point(30, 78);
-            this.inputField1.Margin = new System.Windows.Forms.Padding(0);
-            this.inputField1.Name = "inputField1";
-            this.inputField1.Padding = new System.Windows.Forms.Padding(4);
-            this.inputField1.Size = new System.Drawing.Size(340, 52);
-            this.inputField1.TabIndex = 5;
-            this.inputField1.TabStop = false;
+            this.nameField.BackColor = System.Drawing.Color.White;
+            this.nameField.FieldPassword = '\0';
+            this.nameField.FieldPlaceholder = "Numele tau...";
+            this.nameField.FieldPlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(85)))), ((int)(((byte)(105)))));
+            this.nameField.FieldText = "";
+            this.nameField.FieldTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.nameField.FieldTitle = "Nume";
+            this.nameField.FieldTitleColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(116)))), ((int)(((byte)(139)))));
+            this.nameField.FieldWidth = 340;
+            this.nameField.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameField.Location = new System.Drawing.Point(30, 78);
+            this.nameField.Margin = new System.Windows.Forms.Padding(0);
+            this.nameField.Name = "nameField";
+            this.nameField.Padding = new System.Windows.Forms.Padding(4);
+            this.nameField.Size = new System.Drawing.Size(340, 52);
+            this.nameField.TabIndex = 5;
+            this.nameField.TabStop = false;
             // 
             // controlButton2
             // 
@@ -107,7 +109,7 @@
             this.controlButton2.Name = "controlButton2";
             this.controlButton2.Size = new System.Drawing.Size(50, 50);
             this.controlButton2.TabIndex = 4;
-            this.controlButton2.Click += new System.EventHandler(this.controlButton2_Click);
+            this.controlButton2.Click += new System.EventHandler(this.minimizeButton_Click);
             // 
             // controlButton1
             // 
@@ -118,7 +120,7 @@
             this.controlButton1.Name = "controlButton1";
             this.controlButton1.Size = new System.Drawing.Size(50, 50);
             this.controlButton1.TabIndex = 3;
-            this.controlButton1.Click += new System.EventHandler(this.controlButton1_Click);
+            this.controlButton1.Click += new System.EventHandler(this.closeButton_Click);
             // 
             // PrimaryForm
             // 
@@ -127,18 +129,17 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(400, 380);
             this.Controls.Add(this.passwordCheckbox);
-            this.Controls.Add(this.inputField2);
-            this.Controls.Add(this.inputField1);
+            this.Controls.Add(this.passwordField);
+            this.Controls.Add(this.nameField);
             this.Controls.Add(this.controlButton2);
             this.Controls.Add(this.controlButton1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.authButton);
             this.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "PrimaryForm";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Text = "None";
-            this.Load += new System.EventHandler(this.PrimaryForm_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PrimaryForm_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PrimaryForm_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PrimaryForm_MouseUp);
@@ -148,11 +149,11 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button authButton;
         private UIComponents.ControlButton controlButton1;
         private UIComponents.ControlButton controlButton2;
-        private UIComponents.InputField inputField1;
-        private UIComponents.InputField inputField2;
+        private UIComponents.InputField nameField;
+        private UIComponents.InputField passwordField;
         private System.Windows.Forms.CheckBox passwordCheckbox;
     }
 }
