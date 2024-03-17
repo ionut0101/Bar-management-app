@@ -71,6 +71,7 @@
             this.Name = "InputField";
             this.Padding = new System.Windows.Forms.Padding(4);
             this.Size = new System.Drawing.Size(250, 52);
+            this.Load += new System.EventHandler(this.InputField_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.InputField_Paint);
             this.ResumeLayout(false);
             this.PerformLayout();

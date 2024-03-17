@@ -53,12 +53,12 @@ namespace App
 
         private void button1_Click(object sender, EventArgs e)
         {
-            /*
+            
             string userName = inputField1.Text;
             string password = inputField2.Text;
 
             MessageBox.Show( $"Username :\t{userName}\nPassword :\t{password}" );
-            */
+            
         }
 
         private void controlButton2_Click(object sender, EventArgs e)
@@ -69,6 +69,18 @@ namespace App
         private void controlButton1_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if( passwordCheckbox.Checked )
+            {
+                inputField2.FieldPassword = '\0';
+            } 
+            else
+            {
+                inputField2.FieldPassword = '*';
+            }
         }
     }
 }

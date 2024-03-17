@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.button1 = new System.Windows.Forms.Button();
+            this.passwordCheckbox = new System.Windows.Forms.CheckBox();
             this.inputField2 = new App.UIComponents.InputField();
             this.inputField1 = new App.UIComponents.InputField();
             this.controlButton2 = new App.UIComponents.ControlButton();
@@ -37,13 +38,26 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(28, 303);
+            this.button1.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(30, 300);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(340, 57);
             this.button1.TabIndex = 2;
-            this.button1.Text = "button1";
+            this.button1.Text = "Autentificare";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // passwordCheckbox
+            // 
+            this.passwordCheckbox.AutoSize = true;
+            this.passwordCheckbox.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passwordCheckbox.Location = new System.Drawing.Point(30, 226);
+            this.passwordCheckbox.Name = "passwordCheckbox";
+            this.passwordCheckbox.Size = new System.Drawing.Size(119, 23);
+            this.passwordCheckbox.TabIndex = 7;
+            this.passwordCheckbox.Text = "Arata parola";
+            this.passwordCheckbox.UseVisualStyleBackColor = true;
+            this.passwordCheckbox.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // inputField2
             // 
@@ -55,8 +69,9 @@
             this.inputField2.FieldTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
             this.inputField2.FieldTitle = "Parola";
             this.inputField2.FieldTitleColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(116)))), ((int)(((byte)(139)))));
+            this.inputField2.FieldWidth = 340;
             this.inputField2.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inputField2.Location = new System.Drawing.Point(28, 156);
+            this.inputField2.Location = new System.Drawing.Point(30, 150);
             this.inputField2.Margin = new System.Windows.Forms.Padding(0);
             this.inputField2.Name = "inputField2";
             this.inputField2.Padding = new System.Windows.Forms.Padding(4);
@@ -73,8 +88,9 @@
             this.inputField1.FieldTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
             this.inputField1.FieldTitle = "Nume";
             this.inputField1.FieldTitleColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(116)))), ((int)(((byte)(139)))));
+            this.inputField1.FieldWidth = 340;
             this.inputField1.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inputField1.Location = new System.Drawing.Point(28, 78);
+            this.inputField1.Location = new System.Drawing.Point(30, 78);
             this.inputField1.Margin = new System.Windows.Forms.Padding(0);
             this.inputField1.Name = "inputField1";
             this.inputField1.Padding = new System.Windows.Forms.Padding(4);
@@ -109,7 +125,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(400, 381);
+            this.ClientSize = new System.Drawing.Size(400, 380);
+            this.Controls.Add(this.passwordCheckbox);
             this.Controls.Add(this.inputField2);
             this.Controls.Add(this.inputField1);
             this.Controls.Add(this.controlButton2);
@@ -126,6 +143,7 @@
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PrimaryForm_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PrimaryForm_MouseUp);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -135,6 +153,7 @@
         private UIComponents.ControlButton controlButton2;
         private UIComponents.InputField inputField1;
         private UIComponents.InputField inputField2;
+        private System.Windows.Forms.CheckBox passwordCheckbox;
     }
 }
 

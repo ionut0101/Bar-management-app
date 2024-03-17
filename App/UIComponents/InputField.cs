@@ -11,16 +11,17 @@ namespace App.UIComponents
     {
 
         private string previousText = string.Empty;
+        private char passwordChar = '\0';
 
         [DefaultValue("Title")]
         public string FieldTitle { get; set; }
-        public string FieldText{ get; set; }
+        public string FieldText { get; set; }
         public string FieldPlaceholder { get; set; }
 
-        private Color fieldTextColor = Color.FromArgb( 15, 23, 42 );
-        private Color fieldPlaceholderColor = Color.FromArgb( 71, 85, 105 );
-        private Color fieldTitleColor = Color.FromArgb( 100, 116, 139 );
-        
+        private Color fieldTextColor = Color.FromArgb(15, 23, 42);
+        private Color fieldPlaceholderColor = Color.FromArgb(71, 85, 105);
+        private Color fieldTitleColor = Color.FromArgb(100, 116, 139);
+
         public Color FieldTextColor
         {
             get { return fieldTextColor; }
@@ -48,8 +49,19 @@ namespace App.UIComponents
             }
         }
 
-        [DefaultValue( '\0' )]
-        public char FieldPassword { get; set; }
+        [DefaultValue('\0')]
+        public char FieldPassword
+        {
+            get
+            {
+                return passwordChar;
+            }
+            set
+            {
+                passwordChar = value;
+                textBox.PasswordChar = value;
+            }
+        }
 
         [DefaultValue(false)]
         public bool FieldFocus { get; set; }
@@ -66,6 +78,14 @@ namespace App.UIComponents
             {
                 return previousText;
             }
+        }
+
+        public int FieldWidth { get; set; } = 250;
+
+        private void InputField_Load(object sender, EventArgs e)
+        {
+            textBox.Width = FieldWidth;
+            this.Width = FieldWidth;
         }
 
         private void InputField_Paint(object sender, PaintEventArgs e)
