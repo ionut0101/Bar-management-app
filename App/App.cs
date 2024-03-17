@@ -50,5 +50,25 @@ namespace App
                 this.Location = nextLocation;
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            /*
+            string userName = inputField1.Text;
+            string password = inputField2.Text;
+
+            MessageBox.Show( $"Username :\t{userName}\nPassword :\t{password}" );
+            */
+        }
+
+        private void controlButton2_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void controlButton1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
