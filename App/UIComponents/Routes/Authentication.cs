@@ -1,5 +1,4 @@
 ﻿using App.Classes;
-using App.UIComponents;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,11 +9,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace App
+namespace App.UIComponents.Routes
 {
-    public partial class PrimaryForm : Draggable
+    public partial class Authentication : Draggable
     {
-        public PrimaryForm()
+        public Authentication()
         {
             InitializeComponent();
         }
@@ -23,17 +22,18 @@ namespace App
         {
             Application.Exit();
         }
+
         private void minimizeButton_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
         }
 
-        private void passwordCheckbox_CheckedChanged(object sender, EventArgs e)
+        private void passwordCheckBox_Click(object sender, EventArgs e)
         {
-            if ( passwordCheckBox.Checked == true )
+            if( passwordCheckBox.Checked )
             {
                 passwordField.FieldPassword = '\0';
-            }
+            } 
             else
             {
                 passwordField.FieldPassword = '*';
@@ -42,12 +42,10 @@ namespace App
 
         private void authButton_Click(object sender, EventArgs e)
         {
-            
             string userName = nameField.Text;
             string password = passwordField.Text;
 
             MessageBox.Show($"Username :\t{userName}\nPassword :\t{password}");
         }
-
     }
 }

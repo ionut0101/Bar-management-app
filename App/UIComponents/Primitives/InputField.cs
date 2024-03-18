@@ -17,37 +17,10 @@ namespace App.UIComponents
         public string FieldTitle { get; set; }
         public string FieldText { get; set; }
         public string FieldPlaceholder { get; set; }
-
-        private Color fieldTextColor = Color.FromArgb(15, 23, 42);
-        private Color fieldPlaceholderColor = Color.FromArgb(71, 85, 105);
-        private Color fieldTitleColor = Color.FromArgb(100, 116, 139);
-
-        public Color FieldTextColor
-        {
-            get { return fieldTextColor; }
-            set
-            {
-                fieldTextColor = value;
-            }
-        }
-
-        public Color FieldPlaceholderColor
-        {
-            get { return fieldPlaceholderColor; }
-            set
-            {
-                fieldPlaceholderColor = value;
-            }
-        }
-
-        public Color FieldTitleColor
-        {
-            get { return fieldTitleColor; }
-            set
-            {
-                fieldTitleColor = value;
-            }
-        }
+        public Color FieldTextColor { get; set; } = Color.FromArgb(15, 23, 42);
+        private Color FieldPlaceholderColor { get; set; } = Color.FromArgb(71, 85, 105);
+        private Color FieldTitleColor { get; set; } = Color.FromArgb(100, 116, 139);
+        public int FieldWidth { get; set; } = 250;
 
         public char FieldPassword
         {
@@ -79,8 +52,6 @@ namespace App.UIComponents
             }
         }
 
-        public int FieldWidth { get; set; } = 250;
-
         private void InputField_Load(object sender, EventArgs e)
         {
             textBox.Width = FieldWidth;
@@ -90,7 +61,7 @@ namespace App.UIComponents
         private void InputField_Paint(object sender, PaintEventArgs e)
         {
             label.Text = FieldTitle;
-            label.ForeColor = fieldTitleColor;
+            label.ForeColor = FieldTitleColor;
 
             if( FieldPassword != '\0' )
             {
