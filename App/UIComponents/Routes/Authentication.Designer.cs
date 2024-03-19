@@ -35,6 +35,7 @@
             this.authButton = new App.UIComponents.CommandButton();
             this.passwordCheckBox = new System.Windows.Forms.CheckBox();
             this.routeName1 = new App.UIComponents.Primitives.RouteName();
+            this.formLink1 = new App.UIComponents.Primitives.FormLink();
             this.SuspendLayout();
             // 
             // closeButton
@@ -60,14 +61,17 @@
             // nameField
             // 
             this.nameField.BackColor = System.Drawing.Color.White;
+            this.nameField.FieldFocus = false;
             this.nameField.FieldPassword = '\0';
             this.nameField.FieldPlaceholder = "Numele tau...";
+            this.nameField.FieldPlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(85)))), ((int)(((byte)(105)))));
             this.nameField.FieldText = null;
             this.nameField.FieldTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
             this.nameField.FieldTitle = "Nume";
+            this.nameField.FieldTitleColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(116)))), ((int)(((byte)(139)))));
             this.nameField.FieldWidth = 340;
             this.nameField.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameField.Location = new System.Drawing.Point(30, 117);
+            this.nameField.Location = new System.Drawing.Point(30, 119);
             this.nameField.Margin = new System.Windows.Forms.Padding(0);
             this.nameField.Name = "nameField";
             this.nameField.Padding = new System.Windows.Forms.Padding(4);
@@ -78,14 +82,17 @@
             // passwordField
             // 
             this.passwordField.BackColor = System.Drawing.Color.White;
+            this.passwordField.FieldFocus = false;
             this.passwordField.FieldPassword = '*';
             this.passwordField.FieldPlaceholder = "Parola ta...";
+            this.passwordField.FieldPlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(85)))), ((int)(((byte)(105)))));
             this.passwordField.FieldText = null;
             this.passwordField.FieldTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
             this.passwordField.FieldTitle = "Parola";
+            this.passwordField.FieldTitleColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(116)))), ((int)(((byte)(139)))));
             this.passwordField.FieldWidth = 340;
             this.passwordField.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordField.Location = new System.Drawing.Point(30, 192);
+            this.passwordField.Location = new System.Drawing.Point(30, 194);
             this.passwordField.Margin = new System.Windows.Forms.Padding(0);
             this.passwordField.Name = "passwordField";
             this.passwordField.Padding = new System.Windows.Forms.Padding(4);
@@ -107,7 +114,7 @@
             this.authButton.CommandTextColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(39)))));
             this.authButton.CommandWidth = 340;
             this.authButton.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.authButton.Location = new System.Drawing.Point(29, 325);
+            this.authButton.Location = new System.Drawing.Point(29, 327);
             this.authButton.Margin = new System.Windows.Forms.Padding(0);
             this.authButton.Name = "authButton";
             this.authButton.Size = new System.Drawing.Size(340, 60);
@@ -119,7 +126,7 @@
             this.passwordCheckBox.AutoSize = true;
             this.passwordCheckBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.passwordCheckBox.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordCheckBox.Location = new System.Drawing.Point(29, 266);
+            this.passwordCheckBox.Location = new System.Drawing.Point(29, 268);
             this.passwordCheckBox.Margin = new System.Windows.Forms.Padding(0);
             this.passwordCheckBox.Name = "passwordCheckBox";
             this.passwordCheckBox.Size = new System.Drawing.Size(119, 23);
@@ -131,7 +138,7 @@
             // routeName1
             // 
             this.routeName1.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.routeName1.Location = new System.Drawing.Point(30, 49);
+            this.routeName1.Location = new System.Drawing.Point(30, 51);
             this.routeName1.Margin = new System.Windows.Forms.Padding(0);
             this.routeName1.Name = "routeName1";
             this.routeName1.RouteColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(180)))), ((int)(((byte)(86)))));
@@ -139,12 +146,28 @@
             this.routeName1.Size = new System.Drawing.Size(340, 50);
             this.routeName1.TabIndex = 14;
             // 
+            // formLink1
+            // 
+            this.formLink1.BackColor = System.Drawing.Color.White;
+            this.formLink1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(85)))), ((int)(((byte)(105)))));
+            this.formLink1.LinkColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(180)))), ((int)(((byte)(86)))));
+            this.formLink1.LinkHeight = 50;
+            this.formLink1.LinkText = "Inregistreaza-te";
+            this.formLink1.LinkWidth = 340;
+            this.formLink1.Location = new System.Drawing.Point(29, 398);
+            this.formLink1.Margin = new System.Windows.Forms.Padding(0);
+            this.formLink1.Name = "formLink1";
+            this.formLink1.Size = new System.Drawing.Size(340, 50);
+            this.formLink1.TabIndex = 15;
+            this.formLink1.Click += new System.EventHandler(this.registerLink_Click);
+            // 
             // Authentication
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(400, 412);
+            this.ClientSize = new System.Drawing.Size(400, 452);
+            this.Controls.Add(this.formLink1);
             this.Controls.Add(this.routeName1);
             this.Controls.Add(this.authButton);
             this.Controls.Add(this.passwordCheckBox);
@@ -172,5 +195,6 @@
         private CommandButton authButton;
         private System.Windows.Forms.CheckBox passwordCheckBox;
         private Primitives.RouteName routeName1;
+        private Primitives.FormLink formLink1;
     }
 }

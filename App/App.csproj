@@ -69,6 +69,12 @@
     <Compile Include="UIComponents\Primitives\ControlButton.Designer.cs">
       <DependentUpon>ControlButton.cs</DependentUpon>
     </Compile>
+    <Compile Include="UIComponents\Primitives\FormLink.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIComponents\Primitives\FormLink.Designer.cs">
+      <DependentUpon>FormLink.cs</DependentUpon>
+    </Compile>
     <Compile Include="UIComponents\Primitives\InputField.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -110,6 +116,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UIComponents\Primitives\ControlButton.resx">
       <DependentUpon>ControlButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIComponents\Primitives\FormLink.resx">
+      <DependentUpon>FormLink.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIComponents\Primitives\InputField.resx">
       <DependentUpon>InputField.cs</DependentUpon>

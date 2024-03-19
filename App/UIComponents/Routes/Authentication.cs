@@ -16,6 +16,7 @@ namespace App.UIComponents.Routes
         public Authentication()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void closeButton_Click(object sender, EventArgs e)
@@ -46,6 +47,14 @@ namespace App.UIComponents.Routes
             string password = passwordField.Text;
 
             MessageBox.Show($"Username :\t{userName}\nPassword :\t{password}");
+        }
+
+        private void registerLink_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            Register registerWindow = new Register();
+            registerWindow.Show();
         }
     }
 }
