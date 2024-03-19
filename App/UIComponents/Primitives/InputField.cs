@@ -13,14 +13,14 @@ namespace App.UIComponents
         private string previousText = string.Empty;
         private char passwordChar = '\0';
 
-        [DefaultValue("Title")]
-        public string FieldTitle { get; set; }
+        public string FieldTitle { get; set; } = "Your title goes here...";
         public string FieldText { get; set; }
         public string FieldPlaceholder { get; set; }
         public Color FieldTextColor { get; set; } = Color.FromArgb(15, 23, 42);
-        private Color FieldPlaceholderColor { get; set; } = Color.FromArgb(71, 85, 105);
-        private Color FieldTitleColor { get; set; } = Color.FromArgb(100, 116, 139);
+        public Color FieldPlaceholderColor { get; set; } = Color.FromArgb(71, 85, 105);
+        public Color FieldTitleColor { get; set; } = Color.FromArgb(100, 116, 139);
         public int FieldWidth { get; set; } = 250;
+        public bool FieldFocus { get; set; } = false;
 
         public char FieldPassword
         {
@@ -34,9 +34,6 @@ namespace App.UIComponents
                 textBox.PasswordChar = value;
             }
         }
-
-        [DefaultValue(false)]
-        public bool FieldFocus { get; set; }
 
         public InputField()
         {
